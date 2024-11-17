@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<h2>Savat</h2>
+
+{% if cart_items %}
+    <ul>
+        {% for item in cart_items %}
+            <li>{{ item.product.name }} - Miqdori: {{ item.quantity }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Savatda hech qanday mahsulot yo'q.</p>
+{% endif %}
+
+{% endblock %}

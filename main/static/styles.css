@@ -1,0 +1,98 @@
+/* Umumiy sozlamalar */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color:  #000;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Mahsulotlar ro'yxati uchun */
+h2 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+ul li {
+    background-color: white;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+ul li:hover {
+    transform: scale(1.05);
+}
+
+ul li a {
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    color: #007bff;
+}
+
+/* Sortlash tugmalari */
+div {
+    text-align: center;
+    margin: 20px 0;
+}
+
+div a {
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    margin: 0 10px;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+div a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Mahsulot narxi */
+ul li span.price {
+    font-weight: bold;
+    color: #28a745;
+    font-size: 18px;
+}

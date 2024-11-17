@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mening Do'konim</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="{% url 'product_list' %}">Mahsulotlar</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'cart_view' %}">Savat</a></li>
+                <li><a href="{% url 'logout' %}">Chiqish</a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Kirish</a></li>
+                <li><a href="{% url 'register' %}">Ro'yxatdan o'tish</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

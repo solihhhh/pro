@@ -1,0 +1,36 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<h2>Mahsulotlar ro'yxati</h2>
+
+<div>
+    <a href="?sort_by=price_asc">Narx bo'yicha (arzonidan qimmatiga)</a> |
+    <a href="?sort_by=name">Nomi bo'yicha</a>
+</div>
+
+<ul>
+    {% for product in page_obj %}
+        <li>
+            <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a> - ${{ product.price }}
+        </li>
+    {% empty %}
+        <li>Mahsulotlar mavjud emas.</li>
+    {% endfor %}
+</ul>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+            <a href="?page=1{% if request.GET.sort_by %}&sort_by={{ request.GET.sort_by }}{% endif %}">Birinchi</a>
+            <a href="?page={{ page_obj.previous_page_number }}{% if request.GET.sort_by %}&sort_by={{ request.GET.sort_by }}{% endif %}">Oldingi</a>
+        {% endif %}
+
+        <span>Sahifa {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}</span>
+
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}{% if request.GET.sort_by %}&sort_by={{ request.GET.sort_by }}{% endif %}">Keyingi</a>
+            <a href="?page={{ page_obj.paginator.num_pages }}{% if request.GET.sort_by %}&sort_by={{ request.GET.sort_by }}{% endif %}">Oxirgi</a>
+        {% endif %}
+    </span>
+</div>
+{% endblock %}
