@@ -1,0 +1,19 @@
+{% extends 'main/base.html' %}
+
+{% block content %}
+<h2>Yoqtirgan Mahsulotlaringiz</h2>
+
+{% if liked_products %}
+    <ul>
+        {% for product in liked_products %}
+            <li>
+                <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a> - ${{ product.price }}
+            </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Siz hali birorta mahsulotni yoqtirmadingiz.</p>
+{% endif %}
+
+<a href="{% url 'product_list' %}">Mahsulotlar ro'yxatiga qaytish</a>
+{% endblock %}

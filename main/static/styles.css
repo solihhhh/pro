@@ -1,98 +1,128 @@
-/* Umumiy sozlamalar */
+/* Umumiy uslub */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
-nav {
-    background-color: #333;
-    padding: 10px 0;
-    text-align: center;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color:  #000;
-    text-decoration: none;
-    font-size: 16px;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Mahsulotlar ro'yxati uchun */
 h2 {
     text-align: center;
-    margin-top: 20px;
-    font-size: 24px;
+    margin: 20px 0;
+    color: #444;
 }
 
+/* Qidiruv formasi */
+form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+form input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Sortlash havolalari */
+div {
+    text-align: center;
+    margin: 10px 0;
+}
+
+div a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+div a:hover {
+    color: #0056b3;
+}
+
+/* Mahsulotlar ro'yxati */
 ul {
     list-style-type: none;
     padding: 0;
-    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 ul li {
-    background-color: white;
-    margin: 10px;
     padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-ul li:hover {
-    transform: scale(1.05);
+ul li:last-child {
+    border-bottom: none;
 }
 
 ul li a {
-    font-weight: bold;
-    color: #333;
     text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 ul li a:hover {
     color: #007bff;
 }
 
-/* Sortlash tugmalari */
-div {
+/* Bo'sh ro'yxat uchun */
+ul li.empty {
+    text-align: center;
+    padding: 20px;
+    color: #777;
+    font-style: italic;
+}
+.pagination {
     text-align: center;
     margin: 20px 0;
 }
 
-div a {
-    font-size: 16px;
-    color: #333;
+.pagination a {
     text-decoration: none;
-    padding: 10px 15px;
-    margin: 0 10px;
+    color: #007bff;
+    margin: 0 5px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: #f8f9fa;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-div a:hover {
+.pagination a:hover {
     background-color: #007bff;
     color: white;
 }
 
-/* Mahsulot narxi */
-ul li span.price {
+.pagination span {
     font-weight: bold;
-    color: #28a745;
-    font-size: 18px;
+    margin: 0 10px;
+    color: #333;
 }
